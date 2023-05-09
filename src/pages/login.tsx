@@ -36,7 +36,9 @@ export default function Login() {
         // window.location.href = "/home";
   
         // location.replace("/home")
-        location.href = "/home"
+        // location.href = "/home"
+        location.pathname = "/home"
+        
       }, 700)
     } else {
       toast.error(`${res.message} !`, {
