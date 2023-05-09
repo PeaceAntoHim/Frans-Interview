@@ -30,23 +30,27 @@
 
 ### Prerequisites
 
-- Have appium be installed (for running in local)
-- Run this command bellow to download tools needed
+- Have nodeJs and npm/yarn be installed (for running in local machine)
+- Run this command bellow to start to install all dependencies
 
   ```
-  $ npm install -g appium@next
-  $ appium driver install uiautomator2
-  $ npm install -g appium-doctor
+  $ npm install
   ```
 
-- Run this command to start the appium server
+- Run this command to start development server
   ```
-  appium --allow-cors --session-override --relaxed-security  --base-path /wd/hub
+   npm run dev
   ```
-- Install Application to be tested from playstore
 
-  1. <a target="_blank" href="https://play.google.com/store/apps/details?id=com.github.android&hl=en">Github Application</a>
-  2. <a target="_blank" href="https://play.google.com/store/search?q=lio&c=apps&hl=en">Tabular Application</a>
+- Run this command to build the project use vite
+  ```
+  npm run build
+  ```
+
+- Run this command to view project after build
+   ```
+   npm run preview
+   ```
 
 - Clone the repo
 
