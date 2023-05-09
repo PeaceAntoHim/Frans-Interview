@@ -4,7 +4,7 @@
 <br />
 <div align="center">
 
-<h3 align="center">Inversify Appium</h3>
+<h3 align="center">Test Interview</h3>
 
 </div>
 
