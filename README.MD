@@ -97,5 +97,5 @@
 
 - Second '/home' after login you will go to home page, and have a view to list days and all days can be clicked but for monday you will got list must to buy
 
-- Third '/list-item' after click monday you will get all list to buyed
+- Third '/list-item' after click monday you will get all list to buy
 
