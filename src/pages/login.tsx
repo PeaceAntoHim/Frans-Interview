@@ -33,12 +33,7 @@ export default function Login() {
         position: toast.POSITION.TOP_LEFT
       });
       setTimeout(() => {
-        // window.location.href = "/home";
-  
-        // location.replace("/home")
-        // location.href = "/home"
-        location.pathname = "/home"
-        
+        window.location.href = "/home";     
       }, 700)
     } else {
       toast.error(`${res.message} !`, {
