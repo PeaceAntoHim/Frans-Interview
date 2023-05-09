@@ -89,8 +89,13 @@
 
 - This app has 3 route:
   
-- first '/' for the login in this will go to login page. In here you need email and password to login, here credentials will be used:
+- First '/' for the login in this will go to login page. In here you need email and password to login, here credentials will be used:
   ```
   email:user@example.com
   password:password123
   ```
+
+- Second '/home' after login you will go to home page, and have a view to list days and all days can be clicked but for monday you will got list must to buy
+
+- Third '/list-item' after click monday you will get all list to buyed
+
