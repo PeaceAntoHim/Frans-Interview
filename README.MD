@@ -20,14 +20,12 @@
       </ul>
     </li>
     <li>
-      <ul>
-          <a href="#logic-flow">Getting Started</a>
-          <ul>
+      <a href="#logic-flow">Logic Flow</a>
+         <ul>
             <li>
                <a href="router">Router</a>
             </li>
-          </ul>
-      </ul>
+         </ul>
     </li>
   </ol>
 </details>
