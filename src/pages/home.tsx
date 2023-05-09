@@ -8,7 +8,8 @@ export default function Home() {
 
   const handleDayClick = (day: string) => {
     if (day === 'Monday') {
-      window.location.href = "/list-item";
+      // redirect("/list-item")
+      location.href = "/list-item"
     } else {
       toast.info("You don't have any items for this day", {
         position: toast.POSITION.TOP_CENTER

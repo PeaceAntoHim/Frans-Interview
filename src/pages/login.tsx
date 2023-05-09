@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Auth } from '../core/Autentication';
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+// import {Location} from 'react-router-dom';
 
 export default function Login() {
   const [credential, setCredential] = useState({
@@ -25,12 +26,17 @@ export default function Login() {
     }
     const initAuth = new Auth(dataAuth);
     const res = initAuth.login();
+    // const location = new Location()
+
     if (res.status) {
       toast.success(res.message, {
         position: toast.POSITION.TOP_LEFT
       });
       setTimeout(() => {
-        window.location.href = "/home";
+        // window.location.href = "/home";
+  
+        // location.replace("/home")
+        location.href = "/home"
       }, 700)
     } else {
       toast.error(`${res.message} !`, {
