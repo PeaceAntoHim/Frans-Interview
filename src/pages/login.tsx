@@ -1,6 +1,8 @@
 import '../styles/login.css';
 import { useState } from 'react';
 import { Auth } from '../core/Autentication';
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Login() {
   const [credential, setCredential] = useState({
@@ -24,11 +26,16 @@ export default function Login() {
     const initAuth = new Auth(dataAuth);
     const res = initAuth.login();
     if (res.status) {
-      window.location.href = "/home";
+      toast.success(res.message, {
+        position: toast.POSITION.TOP_LEFT
+      });
+      setTimeout(() => {
+        window.location.href = "/home";
+      }, 700)
     } else {
-      // <Alert message={res.message} />
-      // alert(res.message);
-  
+      toast.error(`${res.message} !`, {
+        position: toast.POSITION.TOP_LEFT
+      });
     }
   };
 
@@ -36,7 +43,7 @@ export default function Login() {
   return (
     <section className='login-container'>
       <h1>Please Login</h1>
-      
+      <ToastContainer />
       <form className='form-wrapper' onSubmit={handleSubmit}>
         <div className='input-wrapper'>
           <input type='email' required placeholder='Email Address' name='email' value={credential.email} onChange={handleInputChange} />

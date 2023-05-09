@@ -20,12 +20,12 @@ export class Auth {
          ) {
          return {
             status: true,
-            message: 'Login success'
+            message: 'Login Success'
          }
       } else {
          return {
             status: false,
-            message: 'Login failed',
+            message: 'Login Failed',
          }
       }
    }

@@ -1,24 +1,24 @@
-// import { useState } from 'react';
 import Day from '../components/day';
-// import ItemList from '../components/itemList';
 import '../styles/home.css';
-
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 
 export default function Home() {
-  // const [selectedDay, setSelectedDay] = useState("");
 
   const handleDayClick = (day: string) => {
     if (day === 'Monday') {
-      // setSelectedDay('Monday');
       window.location.href = "/list-item";
     } else {
-      alert("You don't have any items for this day");
+      toast.info("You don't have any items for this day", {
+        position: toast.POSITION.TOP_CENTER
+      });
     }
   };
 
   return (
     <section className='home-container'>
+       <ToastContainer />
       <div className='home-wrapper'>
         <div className='heading'>
           <h2>Things To Buy!</h2>
