@@ -51,7 +51,7 @@
   $ npm install
   ```
 
-- Run this command bellow to check all linter code and type err
+- Run this command bellow to check all linter code and type error 
    ```
    $ npm run lint
    ```
