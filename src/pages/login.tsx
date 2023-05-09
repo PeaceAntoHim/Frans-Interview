@@ -1,13 +1,12 @@
 import '../styles/login.css';
 import { useState } from 'react';
-import { Auth } from '../core/autentication';
+import { Auth } from '../core/Autentication';
 
 export default function Login() {
   const [credential, setCredential] = useState({
     email: "",
     password: "",
   });
-
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setCredential((prevCredential) => ({
@@ -27,17 +26,21 @@ export default function Login() {
     if (res.status) {
       window.location.href = "/home";
     } else {
-      alert(res.message);
+      // <Alert message={res.message} />
+      // alert(res.message);
+  
     }
-    // Do something with the credential values
   };
+
   
   return (
     <section className='login-container'>
       <h1>Please Login</h1>
+      
       <form className='form-wrapper' onSubmit={handleSubmit}>
         <div className='input-wrapper'>
           <input type='email' required placeholder='Email Address' name='email' value={credential.email} onChange={handleInputChange} />
+          
           <input type='password' required placeholder='Password' name='password' value={credential.password} onChange={handleInputChange} />
         </div>
         <div className='checkbox-wrapper'>
