@@ -20,7 +20,7 @@
       </ul>
     </li>
     <li>
-      <a href="#logic-flow">Logic Flow</a>
+      <a href="#flow">Flow</a>
          <ul>
             <li>
                <a href="router">Router</a>
@@ -82,3 +82,15 @@
         ├───pages
         └───styles
 ```
+
+## Flow
+
+### Router
+
+- This app has 3 route:
+  
+- first '/' for the login in this will go to login page. In here you need email and password to login, here credentials will be used:
+  ```
+  email:user@example.com
+  password:password123
+  ```
